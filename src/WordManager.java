@@ -15,6 +15,7 @@ public class WordManager {
                 + "4. 단어 추가\n"
                 + "5. 단어 수정\n"
                 + "6. 단어 삭제\n"
+                + "7. 파일 저장\n"
                 + "0. 나가기\n"
                 + "********************\n"
                 + "=> 원하는 메뉴는? ");
@@ -39,6 +40,9 @@ public class WordManager {
             }
             else if(menu == 6){
                 wordCRUD.deleteItem();
+            }
+            else if(menu == 7){
+                wordCRUD.saveFile();
             }
         }
     }
