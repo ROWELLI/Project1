@@ -1,5 +1,4 @@
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -7,7 +6,7 @@ import java.util.Scanner;
 public class WordCRUD implements ICRUD {
     ArrayList<Word> list;
     Scanner s;
-    final String fname = "Dictionary.txt";
+    final String fname = "src/Dictionary.txt";
     WordCRUD(Scanner s){
         list = new ArrayList<>();
         this.s = s;
@@ -120,7 +119,7 @@ public class WordCRUD implements ICRUD {
             System.out.println("==>" + count + "개 로딩 완료!!!");
 
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
     }
 }
